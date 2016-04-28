@@ -791,7 +791,6 @@ static void handle_power_supply_state(struct charger *charger, int64_t now)
     soc = get_battery_capacity();
     if (old_soc != soc) {
         old_soc = soc;
-        set_battery_soc_leds(soc);
     }
 
     if (!charger->charger_connected) {
